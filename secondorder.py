@@ -2,7 +2,8 @@ def nvalue(a0, a1, a2, n):
     row1 =  vectordefinition(a0, 1)
     row2 =  vectordefinition(a1, 2)
     row3 =  vectordefinition(a2, 3)
-    systemsolver(row1, row2, row3)
+    LU = systemsolver(row1, row2, row3)
+    return LU[0]*(n**2) + LU[1]*n + LU[2]
 
 def vectordefinition(an, n):
     vector = [n**2, n, 1, an]
@@ -28,6 +29,7 @@ def systemsolver(row1, row2, row3):
     print(row1)
     print(row2)
     print(row3)
+    return [row1[3], row2[3], row3[3]]
 
 def vectormodifier(row, n):
     len_vector = len(row)
@@ -45,4 +47,7 @@ def vectorsubtracter(rowx, rowy, n):
         aux_vector[i] = rowx[i] - (rowx[n] * rowy[i])
     return aux_vector
 
-nvalue(3,2,-4,1)
+print(nvalue(1,3,7,1))
+print(nvalue(1,3,7,2))
+print(nvalue(1,3,7,3))
+print(nvalue(1,3,7,4))
