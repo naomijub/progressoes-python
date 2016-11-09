@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 
-def sum(a0, step, n):
+def sum(a1, step, n):
     sum = 0
     for i in range(n):
-        sum += a0 + (step * i)
+        sum += a1 + (step * i)
     return sum
 
-def nValue(a0, step, n):
-    return a0 + ((n - 1) * step)
+def nvalue(a1, step, n):
+    return a1 + ((n - 1) * step)
 
 
-print(nValue(1,1,10))
+print(nvalue(1,1,10))
 print(sum(1,1,10))

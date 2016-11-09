@@ -1,18 +1,18 @@
 #!/usr/bin/python3
 
-def nValue(a0, q, n):
-    return a0 * (q ** (n - 1))
+def nvalue(a1, q, n):
+    return a1 * (q ** (n - 1))
 
-def sum(a0, q, n):
+def sum(a1, q, n):
     sum = 0
     for i in range(n):
-        sum += nValue(a0, q, i+1)
-        print(i, nValue(a0, q, i+1), sum)
+        sum += nvalue(a1, q, i+1)
+        print(i, nvalue(a1, q, i+1), sum)
     return sum
 
-def sum2(a0, q, n):
-    return a0 * ((q ** n) - 1) / (q - 1)
+def sum2(a1, q, n):
+    return a1 * ((q ** n) - 1) / (q - 1)
 
-print(nValue(1, 2, 4))
+print(nvalue(1, 2, 4))
 print(sum(1,2,4))
 print(sum2(1,2,4))
