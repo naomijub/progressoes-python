@@ -26,9 +26,6 @@ def systemsolver(row1, row2, row3):
     #2 column
     row3 = vectorsubtracter(row3, row2, 1)
 
-    print(row1)
-    print(row2)
-    print(row3)
     return [row1[3], row2[3], row3[3]]
 
 def vectormodifier(row, n):
@@ -47,7 +44,14 @@ def vectorsubtracter(rowx, rowy, n):
         aux_vector[i] = rowx[i] - (rowx[n] * rowy[i])
     return aux_vector
 
+def sum(a1, a2, a3, n):
+    sum = 0
+    for i in range(n):
+        sum += nvalue(a1,a2,a3,i+1)
+    return sum
+
 print(nvalue(1,3,7,1))
 print(nvalue(1,3,7,2))
 print(nvalue(1,3,7,3))
 print(nvalue(1,3,7,4))
+print(sum(1,3,7,4))
